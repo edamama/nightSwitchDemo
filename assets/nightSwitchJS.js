@@ -2,7 +2,8 @@
 
 buttonEle = document.body.querySelector("#activation");
 containerEle = document.body.querySelector("#container");
-imageEle = document.body.querySelector("picture")
+imageEle = document.body.querySelector("#actualPicture")
+messageEle = document.body.querySelector('#message');
 
 
 let mode = "light";
@@ -15,7 +16,11 @@ function switchTheme(){
         
         containerEle.setAttribute("class","dark");
         
-        imageEle.src = "imgAsset/nightImage";
+        imageEle.setAttribute("src","imgAsset/nightImg.png");
+
+        messageEle.setAttribute("style","color:white");
+
+
 
     } else{
     
@@ -23,7 +28,9 @@ function switchTheme(){
 
         containerEle.setAttribute("class","light");
         
-        imageEle.src = "imgAsset/dayImg.png";
+        imageEle.setAttribute("src","imgAsset/dayImg.png");
+
+        messageEle.setAttribute("style","color:black");
 
     }
 
